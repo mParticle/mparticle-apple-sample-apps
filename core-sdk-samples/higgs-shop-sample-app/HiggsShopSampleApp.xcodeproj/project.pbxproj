@@ -1,0 +1,739 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D369DA1027CD6E1500287792 /* LabeledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D369DA0F27CD6E1400287792 /* LabeledTextField.swift */; };
+		DB0DCC7E27691A6D007AD390 /* mParticle-Apple-SDK in Frameworks */ = {isa = PBXBuildFile; productRef = DB0DCC7D27691A6D007AD390 /* mParticle-Apple-SDK */; };
+		DB38C36327AAEA9A007F1B94 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB38C36227AAEA9A007F1B94 /* ShopViewController.swift */; };
+		DB38C36527AAEAFC007F1B94 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB38C36427AAEAFC007F1B94 /* ProductDetailViewController.swift */; };
+		DB38C36727AAEB08007F1B94 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB38C36627AAEB08007F1B94 /* CartViewController.swift */; };
+		DB38C36927AAEB17007F1B94 /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB38C36827AAEB17007F1B94 /* MyAccountViewController.swift */; };
+		DB38C36E27AAF605007F1B94 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB38C36D27AAF601007F1B94 /* TabBarController.swift */; };
+		DB38C37027AB00A6007F1B94 /* ShopTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB38C36F27AB00A6007F1B94 /* ShopTableCell.swift */; };
+		DB38C37227AB01DF007F1B94 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB38C37127AB01DF007F1B94 /* Product.swift */; };
+		DB487EB7275A7FAF00554B99 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DB487EB6275A7FAF00554B99 /* SnapKit */; };
+		DB50278727A9E07600E2F412 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB50278627A9E07600E2F412 /* LaunchScreen.storyboard */; };
+		DB84908227CD458A00F8C82F /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB84908127CD458A00F8C82F /* CheckoutViewController.swift */; };
+		DB9005D627C55599008C6206 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9005D527C55599008C6206 /* Cart.swift */; };
+		DB9005D827C557A4008C6206 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9005D727C557A4008C6206 /* CartItem.swift */; };
+		DBCDCD0F27A87EAB0067E8E9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBCDCD0E27A87EAB0067E8E9 /* Localizable.strings */; };
+		DBD31F6627C6E45C001D5C44 /* CartTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD31F6527C6E45C001D5C44 /* CartTableCell.swift */; };
+		DBED6E3427CE7C520080303B /* ConfigurationData.json in Resources */ = {isa = PBXBuildFile; fileRef = DBED6E3327CE7C520080303B /* ConfigurationData.json */; };
+		DBED6E3627CE8BE20080303B /* Variants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED6E3527CE8BE20080303B /* Variants.swift */; };
+		DBED6E3827CE953B0080303B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED6E3727CE953B0080303B /* Configuration.swift */; };
+		DBED6E3A27CE959D0080303B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED6E3927CE959D0080303B /* Utils.swift */; };
+		DBEDB8C1275A73EE005A039E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEDB8C0275A73EE005A039E /* AppDelegate.swift */; };
+		DBEDB8C3275A73EE005A039E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEDB8C2275A73EE005A039E /* SceneDelegate.swift */; };
+		DBEDB8C5275A73EE005A039E /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEDB8C4275A73EE005A039E /* LandingViewController.swift */; };
+		DBEDB8CA275A73FA005A039E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBEDB8C9275A73FA005A039E /* Assets.xcassets */; };
+		DBEDB8D8275A73FF005A039E /* HiggsShopSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEDB8D7275A73FF005A039E /* HiggsShopSampleAppTests.swift */; };
+		DBEDB8E2275A73FF005A039E /* HiggsShopSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEDB8E1275A73FF005A039E /* HiggsShopSampleAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DBEDB8D4275A73FF005A039E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBEDB8B5275A73EE005A039E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBEDB8BC275A73EE005A039E;
+			remoteInfo = HiggsShopSampleApp;
+		};
+		DBEDB8DE275A73FF005A039E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBEDB8B5275A73EE005A039E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBEDB8BC275A73EE005A039E;
+			remoteInfo = HiggsShopSampleApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D369DA0F27CD6E1400287792 /* LabeledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledTextField.swift; sourceTree = "<group>"; };
+		DB38C36227AAEA9A007F1B94 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		DB38C36427AAEAFC007F1B94 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		DB38C36627AAEB08007F1B94 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		DB38C36827AAEB17007F1B94 /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
+		DB38C36D27AAF601007F1B94 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		DB38C36F27AB00A6007F1B94 /* ShopTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTableCell.swift; sourceTree = "<group>"; };
+		DB38C37127AB01DF007F1B94 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		DB50278627A9E07600E2F412 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DB84908127CD458A00F8C82F /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		DB9005D527C55599008C6206 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		DB9005D727C557A4008C6206 /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
+		DBCDCD0E27A87EAB0067E8E9 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		DBD31F6527C6E45C001D5C44 /* CartTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableCell.swift; sourceTree = "<group>"; };
+		DBED6E3327CE7C520080303B /* ConfigurationData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ConfigurationData.json; sourceTree = "<group>"; };
+		DBED6E3527CE8BE20080303B /* Variants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variants.swift; sourceTree = "<group>"; };
+		DBED6E3727CE953B0080303B /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		DBED6E3927CE959D0080303B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		DBEDB8BD275A73EE005A039E /* HiggsShopSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiggsShopSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBEDB8C0275A73EE005A039E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DBEDB8C2275A73EE005A039E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DBEDB8C4275A73EE005A039E /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		DBEDB8C9275A73FA005A039E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DBEDB8CE275A73FA005A039E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBEDB8D3275A73FF005A039E /* HiggsShopSampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HiggsShopSampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBEDB8D7275A73FF005A039E /* HiggsShopSampleAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiggsShopSampleAppTests.swift; sourceTree = "<group>"; };
+		DBEDB8DD275A73FF005A039E /* HiggsShopSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HiggsShopSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBEDB8E1275A73FF005A039E /* HiggsShopSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiggsShopSampleAppUITests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DBEDB8BA275A73EE005A039E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB0DCC7E27691A6D007AD390 /* mParticle-Apple-SDK in Frameworks */,
+				DB487EB7275A7FAF00554B99 /* SnapKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBEDB8D0275A73FF005A039E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBEDB8DA275A73FF005A039E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DBEDB8B4275A73EE005A039E = {
+			isa = PBXGroup;
+			children = (
+				DBEDB8BF275A73EE005A039E /* HiggsShopSampleApp */,
+				DBEDB8D6275A73FF005A039E /* HiggsShopSampleAppTests */,
+				DBEDB8E0275A73FF005A039E /* HiggsShopSampleAppUITests */,
+				DBEDB8BE275A73EE005A039E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DBEDB8BE275A73EE005A039E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBEDB8BD275A73EE005A039E /* HiggsShopSampleApp.app */,
+				DBEDB8D3275A73FF005A039E /* HiggsShopSampleAppTests.xctest */,
+				DBEDB8DD275A73FF005A039E /* HiggsShopSampleAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBEDB8BF275A73EE005A039E /* HiggsShopSampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				DBEDB8C0275A73EE005A039E /* AppDelegate.swift */,
+				DBEDB8C2275A73EE005A039E /* SceneDelegate.swift */,
+				DBEDB8C4275A73EE005A039E /* LandingViewController.swift */,
+				DB38C36D27AAF601007F1B94 /* TabBarController.swift */,
+				DB38C36227AAEA9A007F1B94 /* ShopViewController.swift */,
+				DB38C36827AAEB17007F1B94 /* MyAccountViewController.swift */,
+				DB38C36627AAEB08007F1B94 /* CartViewController.swift */,
+				DB84908127CD458A00F8C82F /* CheckoutViewController.swift */,
+				DB38C36427AAEAFC007F1B94 /* ProductDetailViewController.swift */,
+				DB38C36F27AB00A6007F1B94 /* ShopTableCell.swift */,
+				DBD31F6527C6E45C001D5C44 /* CartTableCell.swift */,
+				D369DA0F27CD6E1400287792 /* LabeledTextField.swift */,
+				DBED6E3927CE959D0080303B /* Utils.swift */,
+				DBED6E3727CE953B0080303B /* Configuration.swift */,
+				DB38C37127AB01DF007F1B94 /* Product.swift */,
+				DBED6E3527CE8BE20080303B /* Variants.swift */,
+				DB9005D527C55599008C6206 /* Cart.swift */,
+				DB9005D727C557A4008C6206 /* CartItem.swift */,
+				DBEDB8C9275A73FA005A039E /* Assets.xcassets */,
+				DB50278627A9E07600E2F412 /* LaunchScreen.storyboard */,
+				DBEDB8CE275A73FA005A039E /* Info.plist */,
+				DBCDCD0E27A87EAB0067E8E9 /* Localizable.strings */,
+				DBED6E3327CE7C520080303B /* ConfigurationData.json */,
+			);
+			path = HiggsShopSampleApp;
+			sourceTree = "<group>";
+		};
+		DBEDB8D6275A73FF005A039E /* HiggsShopSampleAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				DBEDB8D7275A73FF005A039E /* HiggsShopSampleAppTests.swift */,
+			);
+			path = HiggsShopSampleAppTests;
+			sourceTree = "<group>";
+		};
+		DBEDB8E0275A73FF005A039E /* HiggsShopSampleAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DBEDB8E1275A73FF005A039E /* HiggsShopSampleAppUITests.swift */,
+			);
+			path = HiggsShopSampleAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DBEDB8BC275A73EE005A039E /* HiggsShopSampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBEDB8E7275A73FF005A039E /* Build configuration list for PBXNativeTarget "HiggsShopSampleApp" */;
+			buildPhases = (
+				DBEDB8B9275A73EE005A039E /* Sources */,
+				DBEDB8BA275A73EE005A039E /* Frameworks */,
+				DBEDB8BB275A73EE005A039E /* Resources */,
+				DB4D3DAD27E4DAB600CDC17C /* Run SwiftLint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HiggsShopSampleApp;
+			packageProductDependencies = (
+				DB487EB6275A7FAF00554B99 /* SnapKit */,
+				DB0DCC7D27691A6D007AD390 /* mParticle-Apple-SDK */,
+			);
+			productName = HiggsShopSampleApp;
+			productReference = DBEDB8BD275A73EE005A039E /* HiggsShopSampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DBEDB8D2275A73FF005A039E /* HiggsShopSampleAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBEDB8EA275A73FF005A039E /* Build configuration list for PBXNativeTarget "HiggsShopSampleAppTests" */;
+			buildPhases = (
+				DBEDB8CF275A73FF005A039E /* Sources */,
+				DBEDB8D0275A73FF005A039E /* Frameworks */,
+				DBEDB8D1275A73FF005A039E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBEDB8D5275A73FF005A039E /* PBXTargetDependency */,
+			);
+			name = HiggsShopSampleAppTests;
+			productName = HiggsShopSampleAppTests;
+			productReference = DBEDB8D3275A73FF005A039E /* HiggsShopSampleAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DBEDB8DC275A73FF005A039E /* HiggsShopSampleAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBEDB8ED275A73FF005A039E /* Build configuration list for PBXNativeTarget "HiggsShopSampleAppUITests" */;
+			buildPhases = (
+				DBEDB8D9275A73FF005A039E /* Sources */,
+				DBEDB8DA275A73FF005A039E /* Frameworks */,
+				DBEDB8DB275A73FF005A039E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBEDB8DF275A73FF005A039E /* PBXTargetDependency */,
+			);
+			name = HiggsShopSampleAppUITests;
+			productName = HiggsShopSampleAppUITests;
+			productReference = DBEDB8DD275A73FF005A039E /* HiggsShopSampleAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DBEDB8B5275A73EE005A039E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					DBEDB8BC275A73EE005A039E = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					DBEDB8D2275A73FF005A039E = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = DBEDB8BC275A73EE005A039E;
+					};
+					DBEDB8DC275A73FF005A039E = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = DBEDB8BC275A73EE005A039E;
+					};
+				};
+			};
+			buildConfigurationList = DBEDB8B8275A73EE005A039E /* Build configuration list for PBXProject "HiggsShopSampleApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DBEDB8B4275A73EE005A039E;
+			packageReferences = (
+				DB487EB5275A7FAF00554B99 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				DB0DCC7C27691A6D007AD390 /* XCRemoteSwiftPackageReference "mparticle-apple-sdk" */,
+			);
+			productRefGroup = DBEDB8BE275A73EE005A039E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DBEDB8BC275A73EE005A039E /* HiggsShopSampleApp */,
+				DBEDB8D2275A73FF005A039E /* HiggsShopSampleAppTests */,
+				DBEDB8DC275A73FF005A039E /* HiggsShopSampleAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DBEDB8BB275A73EE005A039E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBED6E3427CE7C520080303B /* ConfigurationData.json in Resources */,
+				DBCDCD0F27A87EAB0067E8E9 /* Localizable.strings in Resources */,
+				DB50278727A9E07600E2F412 /* LaunchScreen.storyboard in Resources */,
+				DBEDB8CA275A73FA005A039E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBEDB8D1275A73FF005A039E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBEDB8DB275A73FF005A039E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DB4D3DAD27E4DAB600CDC17C /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nwhich swiftlint &>/dev/null || echo \"Warning: 'swiftlint' was not found, skipping lint check\"\nwhich swiftlint &>/dev/null || exit 0\nswiftlint\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DBEDB8B9275A73EE005A039E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB38C36327AAEA9A007F1B94 /* ShopViewController.swift in Sources */,
+				DBEDB8C5275A73EE005A039E /* LandingViewController.swift in Sources */,
+				DB38C36E27AAF605007F1B94 /* TabBarController.swift in Sources */,
+				DBD31F6627C6E45C001D5C44 /* CartTableCell.swift in Sources */,
+				DB38C36527AAEAFC007F1B94 /* ProductDetailViewController.swift in Sources */,
+				DB38C37027AB00A6007F1B94 /* ShopTableCell.swift in Sources */,
+				DB38C36927AAEB17007F1B94 /* MyAccountViewController.swift in Sources */,
+				DB9005D627C55599008C6206 /* Cart.swift in Sources */,
+				DBEDB8C1275A73EE005A039E /* AppDelegate.swift in Sources */,
+				DBED6E3827CE953B0080303B /* Configuration.swift in Sources */,
+				DBED6E3A27CE959D0080303B /* Utils.swift in Sources */,
+				DB38C37227AB01DF007F1B94 /* Product.swift in Sources */,
+				DB38C36727AAEB08007F1B94 /* CartViewController.swift in Sources */,
+				DB9005D827C557A4008C6206 /* CartItem.swift in Sources */,
+				DBED6E3627CE8BE20080303B /* Variants.swift in Sources */,
+				DB84908227CD458A00F8C82F /* CheckoutViewController.swift in Sources */,
+				DBEDB8C3275A73EE005A039E /* SceneDelegate.swift in Sources */,
+				D369DA1027CD6E1500287792 /* LabeledTextField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBEDB8CF275A73FF005A039E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBEDB8D8275A73FF005A039E /* HiggsShopSampleAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBEDB8D9275A73FF005A039E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBEDB8E2275A73FF005A039E /* HiggsShopSampleAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DBEDB8D5275A73FF005A039E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBEDB8BC275A73EE005A039E /* HiggsShopSampleApp */;
+			targetProxy = DBEDB8D4275A73FF005A039E /* PBXContainerItemProxy */;
+		};
+		DBEDB8DF275A73FF005A039E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBEDB8BC275A73EE005A039E /* HiggsShopSampleApp */;
+			targetProxy = DBEDB8DE275A73FF005A039E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DBEDB8E5275A73FF005A039E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DBEDB8E6275A73FF005A039E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DBEDB8E8275A73FF005A039E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DLD43Y3TRP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HiggsShopSampleApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HiggsShop;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mparticle.temp.HiggsShopSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DBEDB8E9275A73FF005A039E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DLD43Y3TRP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HiggsShopSampleApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HiggsShop;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mparticle.temp.HiggsShopSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DBEDB8EB275A73FF005A039E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DLD43Y3TRP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mparticle.temp.HiggsShopSampleAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HiggsShopSampleApp.app/HiggsShopSampleApp";
+			};
+			name = Debug;
+		};
+		DBEDB8EC275A73FF005A039E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DLD43Y3TRP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mparticle.temp.HiggsShopSampleAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HiggsShopSampleApp.app/HiggsShopSampleApp";
+			};
+			name = Release;
+		};
+		DBEDB8EE275A73FF005A039E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DLD43Y3TRP;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mparticle.temp.HiggsShopSampleAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HiggsShopSampleApp;
+			};
+			name = Debug;
+		};
+		DBEDB8EF275A73FF005A039E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DLD43Y3TRP;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mparticle.temp.HiggsShopSampleAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HiggsShopSampleApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DBEDB8B8275A73EE005A039E /* Build configuration list for PBXProject "HiggsShopSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBEDB8E5275A73FF005A039E /* Debug */,
+				DBEDB8E6275A73FF005A039E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBEDB8E7275A73FF005A039E /* Build configuration list for PBXNativeTarget "HiggsShopSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBEDB8E8275A73FF005A039E /* Debug */,
+				DBEDB8E9275A73FF005A039E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBEDB8EA275A73FF005A039E /* Build configuration list for PBXNativeTarget "HiggsShopSampleAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBEDB8EB275A73FF005A039E /* Debug */,
+				DBEDB8EC275A73FF005A039E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBEDB8ED275A73FF005A039E /* Build configuration list for PBXNativeTarget "HiggsShopSampleAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBEDB8EE275A73FF005A039E /* Debug */,
+				DBEDB8EF275A73FF005A039E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB0DCC7C27691A6D007AD390 /* XCRemoteSwiftPackageReference "mparticle-apple-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mParticle/mparticle-apple-sdk";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		DB487EB5275A7FAF00554B99 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB0DCC7D27691A6D007AD390 /* mParticle-Apple-SDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB0DCC7C27691A6D007AD390 /* XCRemoteSwiftPackageReference "mparticle-apple-sdk" */;
+			productName = "mParticle-Apple-SDK";
+		};
+		DB487EB6275A7FAF00554B99 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB487EB5275A7FAF00554B99 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = DBEDB8B5275A73EE005A039E /* Project object */;
+}

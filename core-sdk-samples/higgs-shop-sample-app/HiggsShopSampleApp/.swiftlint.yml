@@ -1,0 +1,1 @@
+line_length: 180 		# if this is set to a lower value, a newly created xcode project will fail lint

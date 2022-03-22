@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundGradient" translatesAutoresizingMaskIntoConstraints="NO" id="pMh-na-2kN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HiggsWelcomeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="aXx-Ap-xci">
+                                <rect key="frame" x="82" y="99" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Nkt-Pm-dNo"/>
+                                    <constraint firstAttribute="width" constant="250" id="nUG-7B-TnK"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aXx-Ap-xci" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ATF-WI-xdU"/>
+                            <constraint firstAttribute="bottom" secondItem="pMh-na-2kN" secondAttribute="bottom" id="KfJ-bS-Hif"/>
+                            <constraint firstItem="pMh-na-2kN" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="McA-YO-RtE"/>
+                            <constraint firstItem="pMh-na-2kN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RjO-hD-9r2"/>
+                            <constraint firstItem="aXx-Ap-xci" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="0.5" id="qyh-Hx-LhM"/>
+                            <constraint firstItem="pMh-na-2kN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xE3-PC-gGu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="59" y="287"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BackgroundGradient" width="375" height="812"/>
+        <image name="HiggsWelcomeLogo" width="248" height="224"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
