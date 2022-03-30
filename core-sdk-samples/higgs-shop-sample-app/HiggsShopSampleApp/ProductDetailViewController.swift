@@ -40,6 +40,7 @@ final class ProductDetailViewController: UIViewController, UIPickerViewDataSourc
             make.centerX.equalToSuperview()
         }
         
+        priceLabel.font = Utils.font(ofSize: 16)
         priceLabel.text = "$" + String(format: "%.2f", product.price)
         view.addSubview(priceLabel)
         priceLabel.snp.makeConstraints { make in
@@ -82,6 +83,7 @@ final class ProductDetailViewController: UIViewController, UIPickerViewDataSourc
         addToCartButton.accessibilityIdentifier = "DetailCTA"
         addToCartButton.setTitle(NSLocalizedString("DetailCTA", comment: ""), for: .normal)
         addToCartButton.setTitleColor(.label, for: .normal)
+        addToCartButton.titleLabel?.font = Utils.font(ofSize: 16)
         addToCartButton.backgroundColor = UIColor(red: 64/255.0, green: 121/255.0, blue: 254/255.0, alpha: 1.0)
         addToCartButton.layer.cornerRadius = 8
         addToCartButton.addTarget(self, action: #selector(productDetailButtonAction), for: .touchUpInside)

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D34D7AC827F49D2900C22C44 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D34D7AC727F49D2900C22C44 /* Lato-Regular.ttf */; };
+		D34D7AC927F49D2900C22C44 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D34D7AC727F49D2900C22C44 /* Lato-Regular.ttf */; };
+		D34D7ACA27F49D2900C22C44 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D34D7AC727F49D2900C22C44 /* Lato-Regular.ttf */; };
+		D34D7ACC27F49D6300C22C44 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D34D7ACB27F49D6300C22C44 /* Lato-Bold.ttf */; };
+		D34D7ACD27F49D6300C22C44 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D34D7ACB27F49D6300C22C44 /* Lato-Bold.ttf */; };
+		D34D7ACE27F49D6300C22C44 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D34D7ACB27F49D6300C22C44 /* Lato-Bold.ttf */; };
 		D369DA1027CD6E1500287792 /* LabeledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D369DA0F27CD6E1400287792 /* LabeledTextField.swift */; };
 		DB0DCC7E27691A6D007AD390 /* mParticle-Apple-SDK in Frameworks */ = {isa = PBXBuildFile; productRef = DB0DCC7D27691A6D007AD390 /* mParticle-Apple-SDK */; };
 		DB38C36327AAEA9A007F1B94 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB38C36227AAEA9A007F1B94 /* ShopViewController.swift */; };
@@ -53,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D34D7AC727F49D2900C22C44 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		D34D7ACB27F49D6300C22C44 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		D369DA0F27CD6E1400287792 /* LabeledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledTextField.swift; sourceTree = "<group>"; };
 		DB38C36227AAEA9A007F1B94 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		DB38C36427AAEAFC007F1B94 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +118,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D34D7AC627F49C1200C22C44 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D34D7ACB27F49D6300C22C44 /* Lato-Bold.ttf */,
+				D34D7AC727F49D2900C22C44 /* Lato-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		DBEDB8B4275A73EE005A039E = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +150,7 @@
 		DBEDB8BF275A73EE005A039E /* HiggsShopSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				D34D7AC627F49C1200C22C44 /* Fonts */,
 				DBEDB8C0275A73EE005A039E /* AppDelegate.swift */,
 				DBEDB8C2275A73EE005A039E /* SceneDelegate.swift */,
 				DBEDB8C4275A73EE005A039E /* LandingViewController.swift */,
@@ -290,7 +308,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBED6E3427CE7C520080303B /* ConfigurationData.json in Resources */,
+				D34D7ACC27F49D6300C22C44 /* Lato-Bold.ttf in Resources */,
 				DBCDCD0F27A87EAB0067E8E9 /* Localizable.strings in Resources */,
+				D34D7AC827F49D2900C22C44 /* Lato-Regular.ttf in Resources */,
 				DB50278727A9E07600E2F412 /* LaunchScreen.storyboard in Resources */,
 				DBEDB8CA275A73FA005A039E /* Assets.xcassets in Resources */,
 			);
@@ -300,6 +320,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D34D7AC927F49D2900C22C44 /* Lato-Regular.ttf in Resources */,
+				D34D7ACD27F49D6300C22C44 /* Lato-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +329,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D34D7ACA27F49D2900C22C44 /* Lato-Regular.ttf in Resources */,
+				D34D7ACE27F49D6300C22C44 /* Lato-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

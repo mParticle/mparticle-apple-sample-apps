@@ -27,10 +27,28 @@ final class Utils {
     }
     
     static func font(ofSize size: CGFloat) -> UIFont {
-        return .systemFont(ofSize: size)
+        guard let customFont = UIFont(name: "Lato-Regular", size: UIFont.labelFontSize) else {
+            print("""
+                Failed to load the "Lato-Regular" font.
+                Make sure the font file is included in the project and the font name is spelled correctly.
+                """
+            )
+            return .systemFont(ofSize: size)
+        }
+        
+        return customFont.withSize(size)
     }
     
     static func boldFont(ofSize size: CGFloat) -> UIFont {
-        return .boldSystemFont(ofSize: size)
+        guard let customFont = UIFont(name: "Lato-Bold", size: UIFont.labelFontSize) else {
+            print("""
+                Failed to load the "Lato-Bold" font.
+                Make sure the font file is included in the project and the font name is spelled correctly.
+                """
+            )
+            return .boldSystemFont(ofSize: size)
+        }
+        
+        return customFont.withSize(size)
     }
 }

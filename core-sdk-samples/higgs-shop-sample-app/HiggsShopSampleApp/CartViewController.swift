@@ -12,7 +12,6 @@ final class CartViewController: UITableViewController {
     
     override func viewDidLoad() {
         navigationItem.title = "My Cart"
-        self.navigationController?.navigationBar.titleTextAttributes = [.font: Utils.font(ofSize: 24)]
         edgesForExtendedLayout = []
         let numberOfProducts = AppDelegate.cart.items.count
         var subTotal = 0.0
