@@ -55,6 +55,7 @@ final class MyAccountViewController: UIViewController, UITextFieldDelegate {
         
         signInButton.accessibilityLabel = "MyAccountCTAUnselected"
         signInButton.setTitle(NSLocalizedString("MyAccountCTAUnselected", comment: ""), for: .normal)
+        signInButton.titleLabel?.font = Utils.font(ofSize: 16)
         signInButton.addTarget(self, action: #selector(signIn), for: .touchUpInside)
         signInButton.backgroundColor = UIColor(red: 64/255.0, green: 121/255.0, blue: 254/255.0, alpha: 1.0)
         signInButton.layer.cornerRadius = 8
@@ -88,6 +89,7 @@ final class MyAccountViewController: UIViewController, UITextFieldDelegate {
         
         signOutButton.accessibilityLabel = "MyAccountCTASelected"
         signOutButton.setTitle(NSLocalizedString("MyAccountCTASelected", comment: ""), for: .normal)
+        signOutButton.titleLabel?.font = Utils.font(ofSize: 16)
         signOutButton.addTarget(self, action: #selector(signOut), for: .touchUpInside)
         signOutButton.backgroundColor = UIColor(red: 64/255.0, green: 121/255.0, blue: 254/255.0, alpha: 1.0)
         signOutButton.layer.cornerRadius = 8

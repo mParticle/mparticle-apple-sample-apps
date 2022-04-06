@@ -13,7 +13,6 @@ final class ShopViewController: UITableViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 350
         navigationItem.title = "Shop Higgs"
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: Utils.font(ofSize: 24)]
         
         edgesForExtendedLayout = []
         MParticle.sharedInstance().logScreen("Shop", eventInfo: nil)

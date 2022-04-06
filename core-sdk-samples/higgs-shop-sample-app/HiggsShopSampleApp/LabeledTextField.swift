@@ -30,6 +30,7 @@ final class LabeledTextField: UIView {
         textBoxField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 54))
         textBoxField.leftViewMode = .always
         textBoxField.textColor = .label
+        textBoxField.font = Utils.boldFont(ofSize: 16)
         textBoxField.backgroundColor = .systemBackground
         textBoxField.layer.borderColor = UIColor.gray.cgColor
         textBoxField.layer.borderWidth = 1.0

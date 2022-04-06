@@ -31,6 +31,7 @@ final class LandingViewController: UIViewController {
         welcomeLabel.accessibilityIdentifier = "WelcomeLabel"
         welcomeLabel.textColor = .label
         welcomeLabel.text = NSLocalizedString("LandingWelcome", comment: "")
+        welcomeLabel.font = Utils.font(ofSize: 14)
         welcomeLabel.numberOfLines = 0
         welcomeLabel.textAlignment = .center
         view.addSubview(welcomeLabel)
@@ -43,6 +44,7 @@ final class LandingViewController: UIViewController {
         storeButton.accessibilityIdentifier = "LandingCTA"
         storeButton.setTitle(NSLocalizedString("LandingCTA", comment: ""), for: .normal)
         storeButton.setTitleColor(.label, for: .normal)
+        storeButton.titleLabel?.font = Utils.font(ofSize: 16)
         storeButton.backgroundColor = UIColor(red: 64/255.0, green: 121/255.0, blue: 254/255.0, alpha: 1.0)
         storeButton.layer.cornerRadius = 8
         storeButton.addTarget(self, action: #selector(storeButtonAction), for: .touchUpInside)
@@ -57,6 +59,7 @@ final class LandingViewController: UIViewController {
         disclaimerLabel.accessibilityIdentifier = "DisclaimerLabel"
         disclaimerLabel.textColor = .lightGray
         disclaimerLabel.text = NSLocalizedString("LandingDisclaimer", comment: "")
+        disclaimerLabel.font = Utils.font(ofSize: 12)
         disclaimerLabel.numberOfLines = 0
         disclaimerLabel.textAlignment = .center
         view.addSubview(disclaimerLabel)

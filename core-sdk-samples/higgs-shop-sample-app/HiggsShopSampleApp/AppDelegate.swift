@@ -43,6 +43,14 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, MPListenerProtocol 
         } else {
             log("Error: Unable to create mParticle Options object")
         }
+        
+        UITabBarItem.appearance().setTitleTextAttributes([.font: Utils.font(ofSize: 12)], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([.font: Utils.font(ofSize: 12)], for: .selected)
+        UITabBarItem.appearance().setTitleTextAttributes([.font: Utils.font(ofSize: 12)], for: .highlighted)
+        UIBarButtonItem.appearance().setTitleTextAttributes([.font: Utils.font(ofSize: 12)], for: .normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes([.font: Utils.font(ofSize: 12)], for: .selected)
+        UIBarButtonItem.appearance().setTitleTextAttributes([.font: Utils.font(ofSize: 12)], for: .highlighted)
+        UINavigationBar.appearance().titleTextAttributes = [.font: Utils.boldFont(ofSize: 24)]
 
         return true
     }
