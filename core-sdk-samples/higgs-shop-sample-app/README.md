@@ -18,7 +18,7 @@ The purpose of the app is to highlight the following features:
 
 2. Dependencies will automatically be updated by Swift Package Manager
 
-3. In the `HiggsShopSampleApp` scheme, update the `MPARTICLE_KEY` and `MPARTICLE_SECRET` environment variables from `REPLACEME` to your your mParticle iOS API Key and secret.
+3. In the `HiggsShopSampleApp` scheme, update the `MPARTICLE_KEY` and `MPARTICLE_SECRET` environment variables from `REPLACEME` to your mParticle iOS API Key and secret.
 
 -   Visit your [mParticle Workspace](https://app.mparticle.com/setup/inputs/apps) to generate API Credentials
 
