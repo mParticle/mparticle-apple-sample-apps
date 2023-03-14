@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5353848029C0F2D3000CA200 /* mp-sideloaded-kit-example in Frameworks */ = {isa = PBXBuildFile; productRef = 5353847F29C0F2D3000CA200 /* mp-sideloaded-kit-example */; };
 		D34D7AC827F49D2900C22C44 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D34D7AC727F49D2900C22C44 /* Lato-Regular.ttf */; };
 		D34D7AC927F49D2900C22C44 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D34D7AC727F49D2900C22C44 /* Lato-Regular.ttf */; };
 		D34D7ACA27F49D2900C22C44 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D34D7AC727F49D2900C22C44 /* Lato-Regular.ttf */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5353847D29C0F2C4000CA200 /* mp-sideloaded-kit-example */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "mp-sideloaded-kit-example"; path = "../../sideloaded-kit-samples/mp-sideloaded-kit-example"; sourceTree = "<group>"; };
 		D34D7AC727F49D2900C22C44 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		D34D7ACB27F49D6300C22C44 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		D369DA0F27CD6E1400287792 /* LabeledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledTextField.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			files = (
 				DB0DCC7E27691A6D007AD390 /* mParticle-Apple-SDK in Frameworks */,
 				DB487EB7275A7FAF00554B99 /* SnapKit in Frameworks */,
+				5353848029C0F2D3000CA200 /* mp-sideloaded-kit-example in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +121,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5353847C29C0F2C4000CA200 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				5353847D29C0F2C4000CA200 /* mp-sideloaded-kit-example */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		5353847E29C0F2D3000CA200 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D34D7AC627F49C1200C22C44 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,10 +148,12 @@
 		DBEDB8B4275A73EE005A039E = {
 			isa = PBXGroup;
 			children = (
+				5353847C29C0F2C4000CA200 /* Packages */,
 				DBEDB8BF275A73EE005A039E /* HiggsShopSampleApp */,
 				DBEDB8D6275A73FF005A039E /* HiggsShopSampleAppTests */,
 				DBEDB8E0275A73FF005A039E /* HiggsShopSampleAppUITests */,
 				DBEDB8BE275A73EE005A039E /* Products */,
+				5353847E29C0F2D3000CA200 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -214,6 +234,7 @@
 			packageProductDependencies = (
 				DB487EB6275A7FAF00554B99 /* SnapKit */,
 				DB0DCC7D27691A6D007AD390 /* mParticle-Apple-SDK */,
+				5353847F29C0F2D3000CA200 /* mp-sideloaded-kit-example */,
 			);
 			productName = HiggsShopSampleApp;
 			productReference = DBEDB8BD275A73EE005A039E /* HiggsShopSampleApp.app */;
@@ -747,6 +768,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5353847F29C0F2D3000CA200 /* mp-sideloaded-kit-example */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "mp-sideloaded-kit-example";
+		};
 		DB0DCC7D27691A6D007AD390 /* mParticle-Apple-SDK */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DB0DCC7C27691A6D007AD390 /* XCRemoteSwiftPackageReference "mparticle-apple-sdk" */;
