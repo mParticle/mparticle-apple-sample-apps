@@ -19,7 +19,7 @@ By using this sample app, you will quickly learn how to:
 
 2. Dependencies will automatically be updated by Swift Package Manager
 
-3. In the `HiggsShopSampleApp` scheme, update the `MPARTICLE_KEY` and `MPARTICLE_SECRET` environment variables from `REPLACEME` to your your mParticle iOS API Key and secret.
+3. In the `HiggsShopSampleApp` scheme, update the `MPARTICLE_KEY` and `MPARTICLE_SECRET` environment variables from `REPLACEME` to your mParticle iOS API Key and secret.
 
 -   If you do not have an iOS API key, visit your [mParticle Workspace](https://app.mparticle.com/setup/inputs/apps) to generate API Credentials under "Getting Started"
 
