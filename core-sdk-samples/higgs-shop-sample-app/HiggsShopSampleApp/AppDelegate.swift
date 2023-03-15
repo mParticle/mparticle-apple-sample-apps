@@ -1,5 +1,6 @@
 import UIKit
 import mParticle_Apple_SDK
+import mp_sideloaded_kit_example
 
 @main
 final class AppDelegate: UIResponder, UIApplicationDelegate, MPListenerProtocol {
@@ -97,6 +98,12 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, MPListenerProtocol 
                 options.proxyAppDelegate = false
             }
         }
+        
+        // Sideloaded kits are simply classes that conform to MPKitProtocol and can be used to receive callbacks when various things happen such as events being logged.
+        // This example is a simple implementation that only logs the callbacks to the console, but the data in the callbacks can be used for anything.
+        // NOTE: Sideloaded kits are always active regardless of server-side configuration.
+        options.sideloadedKits = [ConsoleLoggingKit()]
+        
         return options
     }
 
