@@ -100,7 +100,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, MPListenerProtocol 
         }
         
         // Sideloaded kits are simply classes that conform to MPKitProtocol and can be used to receive callbacks when various things happen such as events being logged.
-        // This example uses a simple implementation that just logs the callbacks to the console, but the data in the callbacks can be used for anything.
+        // This example is a simple implementation that only logs the callbacks to the console, but the data in the callbacks can be used for anything.
         // NOTE: Sideloaded kits are always active regardless of server-side configuration.
         options.sideloadedKits = [ConsoleLoggingKit()]
         
