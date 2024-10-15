@@ -17,7 +17,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, MPListenerProtocol 
 
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
     }
-    
+
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
         return .portrait
     }
@@ -38,7 +38,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, MPListenerProtocol 
                 }
                 MParticle.sharedInstance().start(with: options)
             }
-            
+
             if let reset = parseBool(getConfigInfo("MPARTICLE_RESET")), reset == true {
                 MParticle.sharedInstance().reset(completion)
             } else {
@@ -47,7 +47,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, MPListenerProtocol 
         } else {
             log("Error: Unable to create mParticle Options object")
         }
-        
+
         UITabBarItem.appearance().setTitleTextAttributes([.font: Utils.font(ofSize: 12)], for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes([.font: Utils.font(ofSize: 12)], for: .selected)
         UITabBarItem.appearance().setTitleTextAttributes([.font: Utils.font(ofSize: 12)], for: .highlighted)
@@ -101,12 +101,12 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, MPListenerProtocol 
                 options.proxyAppDelegate = false
             }
         }
-        
+
         // Sideloaded kits are simply classes that conform to MPKitProtocol and can be used to receive callbacks when various things happen such as events being logged.
         // This example is a simple implementation that only logs the callbacks to the console, but the data in the callbacks can be used for anything.
         // NOTE: Sideloaded kits are always active regardless of server-side configuration.
         options.sideloadedKits = [MPSideloadedKit(kitInstance: ConsoleLoggingKit())]
-        
+
         return options
     }
 
@@ -160,7 +160,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, MPListenerProtocol 
         }
         return nil
     }
-    
+
     // This code allows us to create predefined Schemes with with different settings and accounts for MParticleOptions. If you would like to use schemes in this way for simulator testing, add these keys as 'Environment Variables' under the 'Arguments' section of the 'Run' tab of the scheme.
     func getOverrideConfig(_ key: String) -> String? {
 #if targetEnvironment(simulator)
@@ -179,7 +179,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, MPListenerProtocol 
         if overrideValue == "REPLACEME" {
             overrideValue = nil
         }
-        
+
         var shouldOverride = true
         if let disableOverride = parseBool(getDefaultConfig("CONFIG_DISABLEOVERRIDE")), disableOverride {
             shouldOverride = false

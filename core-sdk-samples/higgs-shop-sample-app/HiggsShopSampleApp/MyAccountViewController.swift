@@ -4,21 +4,21 @@ import mParticle_Apple_SDK
 
 final class MyAccountViewController: UIViewController, UITextFieldDelegate {
     let myAccountLabel = UILabel()
-    
+
     let myAccountValueTextbox = LabeledTextField()
     let signInButton = UIButton()
-    
+
     let signedInLabel = UILabel()
     let signedInUserLabel = UILabel()
     let signOutButton = UIButton()
-    
+
     let disclaimerLabel = UILabel()
-    
+
     override func viewDidLoad() {
         MParticle.sharedInstance().logScreen("My Account", eventInfo: nil)
-        
+
         view.accessibilityLabel = "MyAccountView"
-        
+
         view.addSubview(myAccountLabel)
         view.addSubview(myAccountValueTextbox)
         view.addSubview(signInButton)
@@ -27,7 +27,7 @@ final class MyAccountViewController: UIViewController, UITextFieldDelegate {
         view.addSubview(signOutButton)
         view.addSubview(disclaimerLabel)
         toggleVisibility(isSignedIn: false)
-        
+
         myAccountLabel.accessibilityLabel = "MyAccountTitle"
         myAccountLabel.text = NSLocalizedString("MyAccountTitle", comment: "")
         myAccountLabel.font = Utils.boldFont(ofSize: 24)
@@ -39,7 +39,7 @@ final class MyAccountViewController: UIViewController, UITextFieldDelegate {
             make.trailing.equalTo(self.view).offset(-32)
             make.height.equalTo(24)
         }
-        
+
         myAccountValueTextbox.accessibilityLabel = "MyAccountUserIdDefault"
         myAccountValueTextbox.isUserInteractionEnabled = true
         myAccountValueTextbox.textBoxField.text = NSLocalizedString("MyAccountUserIdDefault", comment: "")
@@ -52,7 +52,7 @@ final class MyAccountViewController: UIViewController, UITextFieldDelegate {
             make.trailing.equalTo(self.view).offset(-16)
             make.height.equalTo(63)
         }
-        
+
         signInButton.accessibilityLabel = "MyAccountCTAUnselected"
         signInButton.setTitle(NSLocalizedString("MyAccountCTAUnselected", comment: ""), for: .normal)
         signInButton.titleLabel?.font = Utils.font(ofSize: 16)
@@ -65,7 +65,7 @@ final class MyAccountViewController: UIViewController, UITextFieldDelegate {
             make.trailing.equalTo(self.view).offset(-16)
             make.height.equalTo(52)
         }
-        
+
         signedInLabel.accessibilityLabel = "MyAccountYouAreSignedInAs"
         signedInLabel.font = Utils.boldFont(ofSize: 18)
         signedInLabel.textAlignment = .center
@@ -76,7 +76,7 @@ final class MyAccountViewController: UIViewController, UITextFieldDelegate {
             make.height.equalTo(24)
             make.centerX.equalToSuperview()
         }
-        
+
         signedInUserLabel.accessibilityLabel = "MyAccountSignedInUserLabel"
         signedInUserLabel.font = Utils.boldFont(ofSize: 18)
         signedInUserLabel.textAlignment = .center
@@ -86,7 +86,7 @@ final class MyAccountViewController: UIViewController, UITextFieldDelegate {
             make.height.equalTo(20)
             make.centerX.equalToSuperview()
         }
-        
+
         signOutButton.accessibilityLabel = "MyAccountCTASelected"
         signOutButton.setTitle(NSLocalizedString("MyAccountCTASelected", comment: ""), for: .normal)
         signOutButton.titleLabel?.font = Utils.font(ofSize: 16)
@@ -99,7 +99,7 @@ final class MyAccountViewController: UIViewController, UITextFieldDelegate {
             make.trailing.equalTo(self.view).offset(-16)
             make.height.equalTo(52)
         }
-        
+
         disclaimerLabel.accessibilityLabel = "DetailDemoOnly"
         disclaimerLabel.text = NSLocalizedString("DetailDemoOnly", comment: "")
         disclaimerLabel.textColor = .secondaryLabel
@@ -109,7 +109,7 @@ final class MyAccountViewController: UIViewController, UITextFieldDelegate {
             make.centerX.equalToSuperview()
         }
     }
-    
+
     private func toggleVisibility(isSignedIn: Bool) {
         if isSignedIn {
             myAccountValueTextbox.isHidden = true
@@ -127,25 +127,25 @@ final class MyAccountViewController: UIViewController, UITextFieldDelegate {
             signOutButton.isHidden = true
         }
     }
-    
+
     @objc private func signIn() {
         myAccountValueTextbox.textBoxField.resignFirstResponder()
         toggleVisibility(isSignedIn: true)
         let loginRequest = MPIdentityApiRequest.withEmptyUser()
         loginRequest.email = myAccountValueTextbox.textBoxField.text
-        
+
         MParticle.sharedInstance().identity.login(loginRequest) { result, error in
             print("Login request complete - result=\(String(describing: result)) error=\(String(describing: error))")
         }
     }
-    
+
     @objc private func signOut() {
         toggleVisibility(isSignedIn: false)
         MParticle.sharedInstance().identity.logout { result, error in
             print("Logout request complete - result=\(String(describing: result)) error=\(String(describing: error))")
         }
     }
-    
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
          myAccountValueTextbox.textBoxField.resignFirstResponder()
         return true

@@ -8,7 +8,7 @@ final class LandingViewController: UIViewController {
     let welcomeLabel = UILabel()
     let storeButton = UIButton(type: .custom)
     let disclaimerLabel = UILabel()
-    
+
     override func viewDidLoad() {
         backgroundImageView.accessibilityIdentifier = "LandingBackgroundImageView"
         backgroundImageView.image = UIImage(named: "BackgroundGradient")
@@ -17,7 +17,7 @@ final class LandingViewController: UIViewController {
         backgroundImageView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-        
+
         higgsImageView.accessibilityIdentifier = "HiggsWelcomeLogo"
         higgsImageView.image = UIImage(named: "HiggsWelcomeLogo")
         higgsImageView.contentMode = .scaleAspectFit
@@ -27,7 +27,7 @@ final class LandingViewController: UIViewController {
             make.centerY.equalToSuperview().multipliedBy(0.5)
             make.width.height.equalTo(250)
         }
-        
+
         welcomeLabel.accessibilityIdentifier = "WelcomeLabel"
         welcomeLabel.textColor = .label
         welcomeLabel.text = NSLocalizedString("LandingWelcome", comment: "")
@@ -40,7 +40,7 @@ final class LandingViewController: UIViewController {
             make.width.equalToSuperview().multipliedBy(0.8)
             make.centerX.equalToSuperview()
         }
-        
+
         storeButton.accessibilityIdentifier = "LandingCTA"
         storeButton.setTitle(NSLocalizedString("LandingCTA", comment: ""), for: .normal)
         storeButton.setTitleColor(.label, for: .normal)
@@ -55,7 +55,7 @@ final class LandingViewController: UIViewController {
             make.height.equalTo(50)
             make.centerX.equalToSuperview()
         }
-        
+
         disclaimerLabel.accessibilityIdentifier = "DisclaimerLabel"
         disclaimerLabel.textColor = .lightGray
         disclaimerLabel.text = NSLocalizedString("LandingDisclaimer", comment: "")
@@ -70,13 +70,13 @@ final class LandingViewController: UIViewController {
         }
         MParticle.sharedInstance().logScreen("Landing", eventInfo: nil)
     }
-    
+
     override func viewDidAppear(_ _: Bool) {
         if AppDelegate.shouldShowCredsAlert {
             showCredsAlert()
         }
     }
-    
+
     @objc private func storeButtonAction() {
         if AppDelegate.shouldShowCredsAlert {
             showCredsAlert()
@@ -91,7 +91,7 @@ final class LandingViewController: UIViewController {
             window.rootViewController = TabBarController()
         }
     }
-    
+
     private func showCredsAlert() {
         let keysAlertMessage = UIAlertController(title: NSLocalizedString("AlertKeysMissingTitle", comment: ""), message: NSLocalizedString("AlertKeysMissingMessage", comment: ""), preferredStyle: .alert)
         let dismissAction = UIAlertAction(title: NSLocalizedString("AlertKeysMissingDismissLabel", comment: ""), style: .default, handler: { _ in

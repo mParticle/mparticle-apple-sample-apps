@@ -9,19 +9,19 @@ let package = Package(
     products: [
         .library(
             name: "mp-sideloaded-kit-example",
-            targets: ["mp-sideloaded-kit-example"]),
+            targets: ["mp-sideloaded-kit-example"])
     ],
     dependencies: [
       .package(name: "mParticle-Apple-SDK",
                url: "https://github.com/mParticle/mparticle-apple-sdk",
-               .upToNextMajor(from: "8.0.0")),
+               .upToNextMajor(from: "8.0.0"))
     ],
     targets: [
         .target(
             name: "mp-sideloaded-kit-example",
             dependencies: [
-              .byName(name: "mParticle-Apple-SDK"),
+              .byName(name: "mParticle-Apple-SDK")
             ],
-            path: "src"),
+            path: "src")
     ]
 )

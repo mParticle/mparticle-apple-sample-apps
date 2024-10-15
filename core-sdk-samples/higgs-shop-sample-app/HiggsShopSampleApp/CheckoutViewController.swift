@@ -4,48 +4,48 @@ import mParticle_Apple_SDK
 
 final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource {
     let scrollView = UIScrollView()
-    
+
     let checkoutLabel = UILabel()
-    
+
     let shippingLabel = UILabel()
     let shippingDisclaimerLabel = UILabel()
-    
+
     let streetAddressTextbox = LabeledTextField()
     let cityTextbox = LabeledTextField()
     let stateTextbox = LabeledTextField()
     let zipTextbox = LabeledTextField()
-    
+
     let paymentLabel = UILabel()
     let paymentDisclaimerLabel = UILabel()
-    
+
     let creditCardTextbox = LabeledTextField()
     let expirationTextbox = LabeledTextField()
     let cardVerificationTextbox = LabeledTextField()
-    
+
     let reviewOrderLabel = UILabel()
-    
+
     let cartTableView = UITableView()
-    
+
     let subtotalLabel = UILabel()
     let subtotalValueLabel = UILabel()
     let subtotalDivider = UIView()
-    
+
     let salesTaxLabel = UILabel()
     let salesTaxValueLabel = UILabel()
     let salesTaxDivider = UIView()
-    
+
     let shippingCostLabel = UILabel()
     let shippingCostValueLabel = UILabel()
     let shippingCostDivider = UIView()
-    
+
     let grandTotalLabel = UILabel()
     let grandTotalValueLabel = UILabel()
     let grandTotalDivider = UIView()
     let grandTotalHighlight = UIView()
-    
+
     let placeOrderButton = UIButton()
     let placeOrderDisclaimerLabel = UILabel()
-    
+
     override func viewDidLoad() {
         view.addSubview(scrollView)
         scrollView.delegate = self
@@ -56,7 +56,7 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
         }
-        
+
         scrollView.addSubview(checkoutLabel)
         checkoutLabel.text = NSLocalizedString("CheckoutTitle", comment: "")
         checkoutLabel.font = Utils.boldFont(ofSize: 24)
@@ -67,7 +67,7 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
             make.leading.equalTo(self.view).offset(17)
             make.trailing.equalTo(self.view).offset(-17)
         }
-        
+
         scrollView.addSubview(shippingLabel)
         shippingLabel.text = NSLocalizedString("CheckoutSubtitleShipping", comment: "")
         shippingLabel.font = Utils.font(ofSize: 20)
@@ -78,7 +78,7 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
             make.leading.equalTo(checkoutLabel.snp.leading)
             make.trailing.equalTo(checkoutLabel.snp.trailing)
         }
-        
+
         scrollView.addSubview(shippingDisclaimerLabel)
         shippingDisclaimerLabel.text = NSLocalizedString("CheckoutDemoOnly", comment: "")
         shippingDisclaimerLabel.font = Utils.font(ofSize: 12)
@@ -90,7 +90,7 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
             make.leading.equalTo(checkoutLabel.snp.leading)
             make.trailing.equalTo(checkoutLabel.snp.trailing)
         }
-        
+
         scrollView.addSubview(streetAddressTextbox)
         streetAddressTextbox.snp.makeConstraints { make in
             make.top.equalTo(shippingDisclaimerLabel.snp.bottom).offset(16)
@@ -102,7 +102,7 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
         streetAddressTextbox.textBoxField.delegate = self
         streetAddressTextbox.textBoxLabel.text = NSLocalizedString("CheckoutStreetAddressLabel", comment: "")
         streetAddressTextbox.textBoxField.text = NSLocalizedString("CheckoutStreetAddressDefault", comment: "")
-        
+
         scrollView.addSubview(cityTextbox)
         cityTextbox.snp.makeConstraints { make in
             make.top.equalTo(streetAddressTextbox.snp.bottom).offset(20)
@@ -114,7 +114,7 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
         cityTextbox.textBoxField.delegate = self
         cityTextbox.textBoxLabel.text = NSLocalizedString("CheckoutCityAddressLabel", comment: "")
         cityTextbox.textBoxField.text = NSLocalizedString("CheckoutCityAddressDefault", comment: "")
-        
+
         scrollView.addSubview(stateTextbox)
         stateTextbox.snp.makeConstraints { make in
             make.top.equalTo(cityTextbox.snp.bottom).offset(20)
@@ -126,7 +126,7 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
         stateTextbox.textBoxField.delegate = self
         stateTextbox.textBoxLabel.text = NSLocalizedString("CheckoutStateAddressLabel", comment: "")
         stateTextbox.textBoxField.text = NSLocalizedString("CheckoutStateAddressDefault", comment: "")
-        
+
         scrollView.addSubview(zipTextbox)
         zipTextbox.snp.makeConstraints { make in
             make.top.equalTo(cityTextbox.snp.bottom).offset(20)
@@ -138,7 +138,7 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
         zipTextbox.textBoxField.delegate = self
         zipTextbox.textBoxLabel.text = NSLocalizedString("CheckoutZipAddressLabel", comment: "")
         zipTextbox.textBoxField.text = NSLocalizedString("CheckoutZipAddressDefault", comment: "")
-        
+
         scrollView.addSubview(paymentLabel)
         paymentLabel.snp.makeConstraints { make in
             make.top.equalTo(zipTextbox.snp.bottom).offset(45)
@@ -149,7 +149,7 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
         paymentLabel.text = NSLocalizedString("CheckoutSubtitlePayment", comment: "")
         paymentLabel.font = Utils.font(ofSize: 20)
         paymentLabel.textAlignment = .center
-        
+
         scrollView.addSubview(paymentDisclaimerLabel)
         paymentDisclaimerLabel.snp.makeConstraints { make in
             make.top.equalTo(paymentLabel.snp.bottom)
@@ -159,7 +159,7 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
         paymentDisclaimerLabel.font = Utils.font(ofSize: 12)
         paymentDisclaimerLabel.textAlignment = .center
         paymentDisclaimerLabel.textColor = .secondaryLabel
-        
+
         scrollView.addSubview(creditCardTextbox)
         creditCardTextbox.snp.makeConstraints { make in
             make.top.equalTo(paymentDisclaimerLabel.snp.bottom).offset(16)
@@ -171,7 +171,7 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
         creditCardTextbox.textBoxField.delegate = self
         creditCardTextbox.textBoxLabel.text = NSLocalizedString("CheckoutCreditCardNumberLabel", comment: "")
         creditCardTextbox.textBoxField.text = NSLocalizedString("CheckoutCreditCardNumberDefault", comment: "")
-        
+
         scrollView.addSubview(expirationTextbox)
         expirationTextbox.snp.makeConstraints { make in
             make.top.equalTo(creditCardTextbox.snp.bottom).offset(20)
@@ -183,7 +183,7 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
         expirationTextbox.textBoxField.delegate = self
         expirationTextbox.textBoxLabel.text = NSLocalizedString("CheckoutCreditCardExpDateLabel", comment: "")
         expirationTextbox.textBoxField.text = NSLocalizedString("CheckoutCreditCardExpDateDefault", comment: "")
-        
+
         scrollView.addSubview(cardVerificationTextbox)
         cardVerificationTextbox.snp.makeConstraints { make in
             make.top.equalTo(creditCardTextbox.snp.bottom).offset(20)
@@ -195,7 +195,7 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
         cardVerificationTextbox.textBoxField.delegate = self
         cardVerificationTextbox.textBoxLabel.text = NSLocalizedString("CheckoutCreditCardCVCLabel", comment: "")
         cardVerificationTextbox.textBoxField.text = NSLocalizedString("CheckoutCreditCardCVCDefault", comment: "")
-        
+
         scrollView.addSubview(reviewOrderLabel)
         reviewOrderLabel.snp.makeConstraints { make in
             make.top.equalTo(expirationTextbox.snp.bottom).offset(45)
@@ -206,7 +206,7 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
         reviewOrderLabel.text = NSLocalizedString("CheckoutSubtitleReviewOrder", comment: "")
         reviewOrderLabel.font = Utils.font(ofSize: 20)
         reviewOrderLabel.textAlignment = .center
-        
+
         scrollView.addSubview(cartTableView)
         cartTableView.snp.makeConstraints { make in
             make.top.equalTo(reviewOrderLabel.snp.bottom).offset(14)
@@ -221,7 +221,7 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
         cartTableView.delegate = self
         cartTableView.dataSource = self
         cartTableView.reloadData()
-        
+
         scrollView.addSubview(subtotalLabel)
         subtotalLabel.snp.makeConstraints { make in
             make.top.equalTo(cartTableView.snp.bottom).offset(14)
@@ -283,7 +283,7 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
             make.trailing.equalTo(self.view.snp.trailing).offset(-16)
         }
         salesTaxDivider.backgroundColor = .separator
-        
+
         scrollView.addSubview(shippingCostLabel)
         shippingCostLabel.snp.makeConstraints { make in
             make.top.equalTo(salesTaxDivider.snp.bottom).offset(14)
@@ -314,7 +314,7 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
             make.trailing.equalTo(self.view.snp.trailing).offset(-16)
         }
         shippingCostDivider.backgroundColor = .separator
-        
+
         scrollView.addSubview(grandTotalLabel)
         grandTotalLabel.snp.makeConstraints { make in
             make.top.equalTo(shippingCostDivider.snp.bottom).offset(14)
@@ -345,7 +345,7 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
             make.trailing.equalTo(self.view.snp.trailing).offset(-16)
         }
         grandTotalDivider.backgroundColor = .separator
-        
+
         scrollView.addSubview(grandTotalHighlight)
         grandTotalHighlight.snp.makeConstraints { make in
             make.top.equalTo(shippingCostDivider.snp.bottom)
@@ -355,7 +355,7 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
         }
         grandTotalHighlight.backgroundColor = .separator
         scrollView.sendSubviewToBack(grandTotalHighlight)
-        
+
         scrollView.addSubview(placeOrderButton)
         placeOrderButton.snp.makeConstraints { make in
             make.top.equalTo(grandTotalDivider.snp.bottom).offset(38)
@@ -368,7 +368,7 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
         placeOrderButton.backgroundColor = UIColor(red: 64/255.0, green: 121/255.0, blue: 254/255.0, alpha: 1.0)
         placeOrderButton.layer.cornerRadius = 8
         placeOrderButton.titleLabel?.font = Utils.font(ofSize: 16)
-        
+
         scrollView.addSubview(placeOrderDisclaimerLabel)
         placeOrderDisclaimerLabel.snp.makeConstraints { make in
             make.top.equalTo(placeOrderButton.snp.bottom)
@@ -381,16 +381,16 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
         placeOrderDisclaimerLabel.font = Utils.font(ofSize: 12)
         placeOrderDisclaimerLabel.textAlignment = .center
         placeOrderDisclaimerLabel.textColor = .secondaryLabel
-        
+
         calculateCosts()
-        
+
         MParticle.sharedInstance().logScreen("Checkout", eventInfo: nil)
     }
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return AppDelegate.cart.items.count
     }
@@ -405,7 +405,7 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
         cartTableCell.cartItem = AppDelegate.cart.items[indexPath.row]
         return cartTableCell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let removedItem = AppDelegate.cart.items.remove(at: indexPath.row)
         let detailView = ProductDetailViewController(product: removedItem.product)
@@ -417,7 +417,7 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
         event.shouldBeginSession = AppDelegate.eventsBeginSessions
         MParticle.sharedInstance().logEvent(event)
     }
-    
+
     private func calculateCosts() {
         var subtotal = 0.00
         for cartItem in AppDelegate.cart.items {
@@ -425,14 +425,14 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
         }
         let taxTotal = subtotal * 0.08875
         let shippingTotal = subtotal * 0.15
-        
+
         subtotalValueLabel.text = "$" + String(format: "%.2f", subtotal)
         salesTaxValueLabel.text = "$" + String(format: "%.2f", taxTotal)
         shippingCostValueLabel.text = "$" + String(format: "%.2f", shippingTotal)
         grandTotalValueLabel.text = "$" + String(format: "%.2f", subtotal + taxTotal + shippingTotal)
         placeOrderButton.isEnabled = subtotal != 0
     }
-    
+
     @objc private func placeOrder() {
         print("place order")
         if let event = MPCommerceEvent(action: .purchase) {
@@ -463,10 +463,10 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
             event.transactionAttributes = transactionAttributes // transaction attributes are required
             event.shouldBeginSession = AppDelegate.eventsBeginSessions
             MParticle.sharedInstance().logEvent(event)
-            
+
             // Clear the cart
             AppDelegate.cart.items.removeAll()
-            
+
             // Present Purchase Confirmation
             let purchaseMessage = UIAlertController(title: NSLocalizedString("Purchase Complete", comment: ""), message: NSLocalizedString("No actual purchase has been made.", comment: ""), preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: { _ in
@@ -476,7 +476,7 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
             self.present(purchaseMessage, animated: true, completion: nil)
         }
     }
-    
+
     @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         streetAddressTextbox.textBoxField.resignFirstResponder()
         cityTextbox.textBoxField.resignFirstResponder()

@@ -3,9 +3,9 @@ import SnapKit
 import mParticle_Apple_SDK
 
 final class ShopViewController: UITableViewController {
-    
+
     var products = [Product]()
-    
+
     override func viewDidLoad() {
         products = readProducts()
         tableView.accessibilityIdentifier = "ShopTableView"
@@ -13,19 +13,19 @@ final class ShopViewController: UITableViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 350
         navigationItem.title = "Shop Higgs"
-        
+
         edgesForExtendedLayout = []
         MParticle.sharedInstance().logScreen("Shop", eventInfo: nil)
     }
-    
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return products.count
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let shopTableCell: ShopTableCell
         if let cell = tableView.dequeueReusableCell(withIdentifier: ShopTableCell.reuseId) as? ShopTableCell {
@@ -36,7 +36,7 @@ final class ShopViewController: UITableViewController {
         shopTableCell.product = products[indexPath.row]
         return shopTableCell
     }
-    
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailView = ProductDetailViewController(product: products[indexPath.row])
         detailView.hidesBottomBarWhenPushed = true
@@ -55,7 +55,7 @@ final class ShopViewController: UITableViewController {
         if let localData = Utils.readLocalFile(forName: "ConfigurationData") {
             return Utils.parse(jsonData: localData).products
         }
-        
+
         return [Product]()
     }
 }
