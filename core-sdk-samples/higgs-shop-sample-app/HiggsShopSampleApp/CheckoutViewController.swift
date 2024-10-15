@@ -469,7 +469,7 @@ final class CheckoutViewController: UIViewController, UITextFieldDelegate, UIScr
             
             // Present Purchase Confirmation
             let purchaseMessage = UIAlertController(title: NSLocalizedString("Purchase Complete", comment: ""), message: NSLocalizedString("No actual purchase has been made.", comment: ""), preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: .default, handler: { (_) -> Void in
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: { _ in
                 self.navigationController?.popViewController(animated: true)
              })
             purchaseMessage.addAction(okAction)

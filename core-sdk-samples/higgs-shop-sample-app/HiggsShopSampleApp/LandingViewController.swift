@@ -94,12 +94,12 @@ final class LandingViewController: UIViewController {
     
     private func showCredsAlert() {
         let keysAlertMessage = UIAlertController(title: NSLocalizedString("AlertKeysMissingTitle", comment: ""), message: NSLocalizedString("AlertKeysMissingMessage", comment: ""), preferredStyle: .alert)
-        let dismissAction = UIAlertAction(title: NSLocalizedString("AlertKeysMissingDismissLabel", comment: ""), style: .default, handler: { (_) -> Void in
+        let dismissAction = UIAlertAction(title: NSLocalizedString("AlertKeysMissingDismissLabel", comment: ""), style: .default, handler: { _ in
             self.navigationController?.popViewController(animated: true)
             exit(1)
          })
         dismissAction.accessibilityIdentifier = "AlertKeysMissingDismissLabel"
-        let docsAction = UIAlertAction(title: NSLocalizedString("AlertKeysMissingDocsLabel", comment: ""), style: .default, handler: { (_) -> Void in
+        let docsAction = UIAlertAction(title: NSLocalizedString("AlertKeysMissingDocsLabel", comment: ""), style: .default, handler: { _ in
             self.navigationController?.popViewController(animated: true)
             let url = URL(string: NSLocalizedString("AlertKeysMissingDocsURL", comment: ""))
             if let url = url {
