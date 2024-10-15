@@ -6,10 +6,10 @@ final class CartViewController: UITableViewController {
     let subtotalLabel = UILabel()
     let subtotalValueLabel = UILabel()
     let subtotalDivider = UIView()
-    
+
     let checkoutButton = UIButton()
     let checkoutDisclaimerLabel = UILabel()
-    
+
     override func viewDidLoad() {
         navigationItem.title = "My Cart"
         edgesForExtendedLayout = []
@@ -18,27 +18,27 @@ final class CartViewController: UITableViewController {
         for item in AppDelegate.cart.items {
             subTotal += Double(item.quantity) * item.product.price
         }
-        
+
         // Renders an initial cart view when the screen loads
         MParticle.sharedInstance().logScreen("View My Cart", eventInfo: ["number_of_products": numberOfProducts, "total_product_amounts": subTotal])
-        
+
         tableView.accessibilityIdentifier = "CartTableView"
         tableView.register(CartTableCell.self, forCellReuseIdentifier: CartTableCell.reuseId)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 80
-        
+
         calculateCosts()
     }
-        
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         reloadTable()
         calculateCosts()
     }
-    
+
     private func reloadTable() {
         tableView.reloadData()
-        
+
         let count = AppDelegate.cart.items.count
         tabBarController?.tabBar.items?.last?.badgeValue = (count == 0 ? nil : "\(AppDelegate.cart.items.count)")
 
@@ -56,7 +56,7 @@ final class CartViewController: UITableViewController {
             tableView.tableHeaderView = nil
             let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 164))
             footerView.backgroundColor = UIColor.clear
-            
+
             footerView.addSubview(subtotalLabel)
             subtotalLabel.snp.makeConstraints { make in
                 make.top.equalTo(footerView.snp.top).offset(14)
@@ -86,7 +86,7 @@ final class CartViewController: UITableViewController {
                 make.trailing.equalTo(footerView.snp.trailing).offset(-16)
             }
             subtotalDivider.backgroundColor = .separator
-            
+
             footerView.addSubview(checkoutButton)
             checkoutButton.snp.makeConstraints { make in
                 make.top.equalTo(subtotalDivider.snp.bottom).offset(38)
@@ -99,7 +99,7 @@ final class CartViewController: UITableViewController {
             checkoutButton.backgroundColor = UIColor(red: 64/255.0, green: 121/255.0, blue: 254/255.0, alpha: 1.0)
             checkoutButton.layer.cornerRadius = 8
             checkoutButton.titleLabel?.font = Utils.font(ofSize: 16)
-            
+
             footerView.addSubview(checkoutDisclaimerLabel)
             checkoutDisclaimerLabel.snp.makeConstraints { make in
                 make.top.equalTo(checkoutButton.snp.bottom).offset(19)
@@ -111,17 +111,17 @@ final class CartViewController: UITableViewController {
             checkoutDisclaimerLabel.font = Utils.font(ofSize: 12)
             checkoutDisclaimerLabel.textAlignment = .center
             checkoutDisclaimerLabel.textColor = .secondaryLabel
-            
+
             footerView.frame.size.height = 164
             tableView.tableFooterView = footerView
             tableView.isScrollEnabled = true
         }
     }
-    
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return AppDelegate.cart.items.count
     }
@@ -136,7 +136,7 @@ final class CartViewController: UITableViewController {
         cartTableCell.cartItem = AppDelegate.cart.items[indexPath.row]
         return cartTableCell
     }
-    
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let removedItem = AppDelegate.cart.items.remove(at: indexPath.row)
         let detailView = ProductDetailViewController(product: removedItem.product)
@@ -148,17 +148,17 @@ final class CartViewController: UITableViewController {
         event.shouldBeginSession = AppDelegate.eventsBeginSessions
         MParticle.sharedInstance().logEvent(event)
     }
-    
+
     private func calculateCosts() {
         var subtotal = 0.00
         for cartItem in AppDelegate.cart.items {
             subtotal += cartItem.totalAmount
         }
-        
+
         subtotalValueLabel.text = "$" + String(format: "%.2f", subtotal)
         checkoutButton.isEnabled = subtotal != 0
     }
-    
+
     @objc private func checkout() {
         if let event = MPCommerceEvent(action: .checkout) {
             var products = [MPProduct]()
@@ -189,7 +189,7 @@ final class CartViewController: UITableViewController {
             event.transactionAttributes = transactionAttributes // transaction attributes are required
             event.shouldBeginSession = AppDelegate.eventsBeginSessions
             MParticle.sharedInstance().logEvent(event)
-            
+
             let checkoutVC = CheckoutViewController()
             checkoutVC.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(checkoutVC, animated: true)

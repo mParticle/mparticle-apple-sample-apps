@@ -1,11 +1,11 @@
 import UIKit
 
 final class TabBarController: UITabBarController {
-    
+
     enum TabType: Int, CaseIterable {
         case shop = 0, myAccount, cart
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.accessibilityIdentifier = "TabBarController"
@@ -36,5 +36,5 @@ final class TabBarController: UITabBarController {
         }
         self.viewControllers = controllers
     }
-    
+
 }

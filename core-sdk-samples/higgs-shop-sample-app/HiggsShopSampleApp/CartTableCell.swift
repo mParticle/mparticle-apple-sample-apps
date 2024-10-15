@@ -3,13 +3,13 @@ import SnapKit
 
 final class CartTableCell: UITableViewCell {
     static let reuseId = "CartTableCell"
-    
+
     let productImageView = UIImageView()
     let productNameLabel = UILabel()
     let productDetailLabel = UILabel()
     let productPriceLabel = UILabel()
     let removeProductButton = UIButton()
-    
+
     var cartItem: CartItem? {
         didSet {
             if let cartItem = cartItem {
@@ -26,10 +26,10 @@ final class CartTableCell: UITableViewCell {
             }
         }
     }
-    
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+
         productImageView.accessibilityIdentifier = "CartCellProductImageView"
         productImageView.contentMode = .scaleAspectFill
         addSubview(productImageView)
@@ -39,7 +39,7 @@ final class CartTableCell: UITableViewCell {
             make.bottom.equalTo(self.snp.bottom).offset(-16)
             make.width.equalTo(100)
         }
-        
+
         productNameLabel.accessibilityIdentifier = "CartCellProductNameLabel"
         productNameLabel.textColor = .label
         productNameLabel.font = Utils.font(ofSize: 16)
@@ -52,7 +52,7 @@ final class CartTableCell: UITableViewCell {
             make.height.equalTo(24).priority(.high)
             make.trailing.equalTo(productPriceLabel.snp.leading).offset(-5)
         }
-        
+
         productPriceLabel.accessibilityIdentifier = "CartCellProductPriceLabel"
         productPriceLabel.textColor = .label
         productPriceLabel.font = Utils.font(ofSize: 15)
@@ -62,7 +62,7 @@ final class CartTableCell: UITableViewCell {
             make.trailing.equalTo(self.snp.trailing).offset(-32)
             make.height.equalTo(16)
         }
-        
+
         productDetailLabel.accessibilityIdentifier = "CartCellProductDetailLabel"
         productDetailLabel.textColor = .secondaryLabel
         productDetailLabel.font = Utils.font(ofSize: 14)
@@ -73,7 +73,7 @@ final class CartTableCell: UITableViewCell {
             make.leading.equalTo(productImageView.snp.trailing).offset(20)
             make.height.equalTo(20)
         }
-        
+
         addSubview(removeProductButton)
         removeProductButton.snp.makeConstraints { make in
             make.top.equalTo(productDetailLabel.snp.bottom)
@@ -88,7 +88,7 @@ final class CartTableCell: UITableViewCell {
         removeProductButton.layer.borderWidth = 0
         removeProductButton.contentHorizontalAlignment = .left
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

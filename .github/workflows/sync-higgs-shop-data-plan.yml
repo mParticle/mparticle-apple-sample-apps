@@ -26,7 +26,7 @@ jobs:
             GIT_COMMITTER_EMAIL: developers@mparticle.com
         steps:
             - name: Checkout
-              uses: actions/checkout@v2
+              uses: actions/checkout@v4
               with:
                   ref: development
 

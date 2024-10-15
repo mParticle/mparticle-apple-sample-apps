@@ -11,10 +11,10 @@ final class Utils {
         } catch {
             print(error)
         }
-        
+
         return nil
     }
-    
+
     static func parse(jsonData: Data) -> Configuration {
         do {
             let decodedData = try JSONDecoder().decode(Configuration.self, from: jsonData)
@@ -22,10 +22,10 @@ final class Utils {
         } catch {
             print(error)
         }
-        
+
         return Configuration(products: [Product]())
     }
-    
+
     static func font(ofSize size: CGFloat) -> UIFont {
         guard let customFont = UIFont(name: "Lato-Regular", size: UIFont.labelFontSize) else {
             print("""
@@ -35,10 +35,10 @@ final class Utils {
             )
             return .systemFont(ofSize: size)
         }
-        
+
         return customFont.withSize(size)
     }
-    
+
     static func boldFont(ofSize size: CGFloat) -> UIFont {
         guard let customFont = UIFont(name: "Lato-Bold", size: UIFont.labelFontSize) else {
             print("""
@@ -48,7 +48,7 @@ final class Utils {
             )
             return .boldSystemFont(ofSize: size)
         }
-        
+
         return customFont.withSize(size)
     }
 }

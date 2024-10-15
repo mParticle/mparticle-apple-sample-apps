@@ -3,10 +3,10 @@ import SnapKit
 
 final class LabeledTextField: UIView {
     static let reuseId = "CartTableCell"
-    
+
     let textBoxField = UITextField()
     let textBoxLabel = UILabel()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         sharedLayout()
@@ -36,7 +36,7 @@ final class LabeledTextField: UIView {
         textBoxField.layer.borderWidth = 1.0
         textBoxField.layer.cornerRadius = 3.5
         textBoxField.returnKeyType = .done
-        
+
         self.addSubview(textBoxLabel)
         textBoxLabel.snp.makeConstraints { make in
             make.top.equalTo(self)
