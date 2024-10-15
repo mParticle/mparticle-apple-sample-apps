@@ -18,7 +18,7 @@ jobs:
         runs-on: macOS-latest
         steps:
             - name: Git checkout
-              uses: actions/checkout@v2
+              uses: actions/checkout@v4
 
             - name: Branch name
               run: |
@@ -43,7 +43,7 @@ jobs:
 
         steps:
             - name: Checkout
-              uses: actions/checkout@v2
+              uses: actions/checkout@v4
 
             - name: Release --dry-run
               if: ${{ github.event.inputs.dryRun == 'true'}}

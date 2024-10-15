@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run UI tests
-        run: xcodebuild test -project HiggsShopSampleApp.xcodeproj -destination "platform=iOS Simulator,name=iPhone 12,OS=latest" -scheme HiggsShopSampleApp
+        run: xcodebuild test -project HiggsShopSampleApp.xcodeproj -destination "platform=iOS Simulator,name=iPhone 15,OS=latest" -scheme HiggsShopSampleApp
 
   run-tests-with-thread-sanitizer:
     runs-on: macos-latest
@@ -34,7 +34,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run tests with thread sanitizer
-        run: xcodebuild test -project HiggsShopSampleApp.xcodeproj -destination "platform=iOS Simulator,name=iPhone 12,OS=latest" -scheme HiggsShopSampleApp -enableThreadSanitizer YES
+        run: xcodebuild test -project HiggsShopSampleApp.xcodeproj -destination "platform=iOS Simulator,name=iPhone 15,OS=latest" -scheme HiggsShopSampleApp -enableThreadSanitizer YES
 
 
   run-tests-with-address-sanitizer:
@@ -44,7 +44,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run tests with address sanitizer
-        run: xcodebuild test -project HiggsShopSampleApp.xcodeproj -destination "platform=iOS Simulator,name=iPhone 12,OS=latest" -scheme HiggsShopSampleApp -enableAddressSanitizer YES
+        run: xcodebuild test -project HiggsShopSampleApp.xcodeproj -destination "platform=iOS Simulator,name=iPhone 15,OS=latest" -scheme HiggsShopSampleApp -enableAddressSanitizer YES
 
   run-analyzer:
     runs-on: macos-latest
@@ -53,4 +53,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run static analyzer
-        run: xcodebuild analyze -project HiggsShopSampleApp.xcodeproj -scheme HiggsShopSampleApp -destination "platform=iOS Simulator,name=iPhone 12,OS=latest"
+        run: xcodebuild analyze -project HiggsShopSampleApp.xcodeproj -scheme HiggsShopSampleApp -destination "platform=iOS Simulator,name=iPhone 15,OS=latest"
